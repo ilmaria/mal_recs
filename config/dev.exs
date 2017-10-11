@@ -50,8 +50,8 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :mal_recs, MalRecs.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "mal_recs_pg",
+  password: "mal_recs_pg",
   database: "mal_recs_dev",
   hostname: "localhost",
   pool_size: 10

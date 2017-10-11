@@ -12,8 +12,8 @@ config :logger, level: :warn
 # Configure your database
 config :mal_recs, MalRecs.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "mal_recs_pg",
+  password: "mal_recs_pg",
   database: "mal_recs_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
