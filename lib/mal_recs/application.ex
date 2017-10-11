@@ -9,11 +9,10 @@ defmodule MalRecs.Application do
     # Define workers and child supervisors to be supervised
     children = [
       # Start the Ecto repository
-      supervisor(MalRecs.Repo, []),
+      MalRecs.Repo,
       # Start the endpoint when the application starts
-      supervisor(MalRecsWeb.Endpoint, []),
-      # Start your own worker by calling: MalRecs.Worker.start_link(arg1, arg2, arg3)
-      # worker(MalRecs.Worker, [arg1, arg2, arg3]),
+      MalRecsWeb.Endpoint,
+      MalRecs.Scraper
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
